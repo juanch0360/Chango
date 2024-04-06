@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Invitación</title>
+</head>
+<body>
+  <h1>¡Bienvenido a nuestra fiesta!</h1>
+  <p>Por favor, ingresa tu nombre y confirma tu asistencia:</p>
+  <input type="text" id="nombre" placeholder="Tu Nombre">
+  <br>
+  <label for="asistencia">¿Asistirás?</label>
+  <input type="checkbox" id="asistencia">
+  <br>
+  <button onclick="enviarRespuesta()">Enviar</button>
+
+  <script>
+    function enviarRespuesta() {
+      var nombre = document.getElementById('nombre').value;
+      var asistencia = document.getElementById('asistencia').checked ? 'Asistirá' : 'No Asistirá';
+
+      // Aquí puedes realizar acciones adicionales, como enviar los datos a una base de datos o mostrar un mensaje de confirmación.
+      alert("¡Gracias por tu respuesta, " + nombre + "! Has confirmado que " + asistencia + ".");
+
+      // Puedes redirigir a otra página después de enviar la respuesta, si deseas.
+      // window.location.href = "pagina_de_agradecimiento.html";
+    }
+  </script>
+</body>
+</html>
